@@ -1,0 +1,9 @@
+.DS_Store
+.omx/
+.idea/
+.vscode/
+node_modules/
+dist/
+coverage/
+.env
+.env.*
