@@ -31,9 +31,3 @@ It is not meant to be the only correct answer. It is meant to demonstrate the de
 - Conventional software quality signals are thin: no visible tests, CI, or contribution workflow. In this case that is less a sign of neglect than a sign that the repository is optimized for experimentation rather than reusable product development.
 - The main practical risk is environmental fragility. Cache state, GPU assumptions, and external data downloads all affect first-run success, even though the happy-path instructions are short.
 
-## Where To Read Next
-
-- Start with `program.md` to understand what the agent is actually allowed to do and how the experiment loop is judged.
-- Then read `prepare.py` for the fixed constraints and evaluation logic that give the loop meaning.
-- Read `train.py` after that, focusing first on the hyperparameter block and training loop before digging into model internals.
-- Return to `README.md` last for platform notes and the rationale behind the repo's intentionally narrow scope.

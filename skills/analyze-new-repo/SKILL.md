@@ -13,7 +13,7 @@ The goal is not to generate a lightweight summary. The goal is to produce a comp
 - how it is organized and how it runs
 - which design decisions define the repository
 - what constraints, risks, and blind spots matter most
-- what to read next and why
+- where the architectural center of gravity really is
 
 ## When To Use
 
@@ -173,7 +173,7 @@ Your output must:
 - open with a short section called `Repository Thesis`
 - include 4-6 sections total, chosen to fit the repository
 - use concrete headings instead of a fixed universal set when the repo warrants it
-- always cover: purpose, execution path, key architecture, risks or quality signals, and recommended next reading
+- always cover: purpose, execution path, key architecture, and risks or quality signals
 - prefer flat bullets, but use short paragraphs when a section needs stronger synthesis
 - make each bullet do at least two jobs: state a fact and explain its implication
 
@@ -184,7 +184,7 @@ Good section names include:
 - `Architectural Center of Gravity`
 - `Project Conventions`
 - `Quality Signals and Risks`
-- `Where To Read Next`
+- `Distinctive Design Decisions`
 - `Unknowns Worth Verifying`
 
 Avoid mechanically reusing the same section titles for every repository if the result feels generic.

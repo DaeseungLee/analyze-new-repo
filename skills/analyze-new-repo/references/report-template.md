@@ -2,8 +2,8 @@
 
 Use this as a structure guide, not a rigid fill-in-the-blanks form.
 
-Every report must begin with `Repository Thesis` and end with `Where To Read Next`.
-Between those, choose the sections that best fit the repository.
+Every report must begin with `Repository Thesis`.
+Choose the remaining sections to fit the repository.
 
 Aim for 4-6 total sections.
 

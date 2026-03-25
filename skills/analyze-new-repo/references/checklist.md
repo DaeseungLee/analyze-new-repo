@@ -12,4 +12,4 @@
 - Note visible quality signals: tests, CI, release flow, docs quality, dependency assumptions.
 - Call out the most important risks, blind spots, and unknowns.
 - Separate confirmed facts from inference.
-- Write a short analyst-style report with flexible sectioning, starting with `Repository Thesis` and ending with `Where To Read Next`.
+- Write a short analyst-style report with flexible sectioning, starting with `Repository Thesis` and emphasizing architecture, execution, and practical judgment.
