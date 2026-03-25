@@ -64,8 +64,6 @@ skills/
     references/
       checklist.md
       report-template.md
-examples/
-  karpathy-autoresearch.md
 LICENSE
 README.md
 ```
@@ -78,8 +76,6 @@ README.md
   - A compact checklist for repository analysis.
 - `skills/analyze-new-repo/references/report-template.md`
   - A structure guide for the final report.
-- `examples/karpathy-autoresearch.md`
-  - A sample output for a small, distinctive repository. It is an example of the intended tone and synthesis level, not a universal template.
 
 ## Development and Local Checks
 
