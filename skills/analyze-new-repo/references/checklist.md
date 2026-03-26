@@ -4,6 +4,7 @@
 - Inspect top-level directories, dependency manifests, and likely entrypoints.
 - If the repo is large, decide explicitly whether you are doing full coverage or representative sampling.
 - For monorepos, identify workspace/package boundaries before describing the repo as one system.
+- For monorepos, read root manifests and CI before going deep into packages.
 - Find run, build, and test commands in docs and config.
 - Check contribution and workflow artifacts: `.github/`, `CONTRIBUTING*`, PR templates, ownership files.
 - Open the main entrypoint and 2-5 critical modules on the execution path.

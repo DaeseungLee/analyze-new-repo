@@ -18,6 +18,11 @@ Aim for 4-6 total sections.
 
 Choose 2-4 of the following depending on the repository.
 
+### Repository Shape
+- Use this when the repo is a monorepo, multi-package workspace, or mixed infrastructure/application repository.
+- Separate deployable apps, shared packages, infrastructure, and auxiliary directories.
+- Explain which parts are primary and which parts are supporting.
+
 ### Execution Model
 - Summarize the shortest trustworthy run, build, and test path.
 - Note any environment assumptions, external services, or platform constraints.
@@ -46,10 +51,3 @@ Choose 2-4 of the following depending on the repository.
 ### Unknowns Worth Verifying
 - List the highest-value uncertainties that could mislead future work.
 - Prefer unknowns that affect implementation safety, architecture understanding, or runtime assumptions.
-
-## Where To Read Next
-
-- Recommend the next files or directories to open in priority order.
-- For each item, say what the reader should look for.
-- Keep the list short and high signal.
-- Defer peripheral material so the reading path stays focused.

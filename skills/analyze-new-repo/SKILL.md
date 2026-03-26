@@ -149,8 +149,38 @@ Adjust depth to repository size instead of pretending every repo deserves the sa
 - **Small repos:** read the main files directly and go deeper on the true control path.
 - **Medium repos:** inspect the full surface, then choose the 3-5 modules that define execution and architecture.
 - **Large repos or monorepos:** explicitly say you are sampling. Start from manifests, workspace config, root docs, CI, and top-level app/package directories before diving into internals.
-- For monorepos, identify the repository shape first: package manager workspace, multiple deployable apps, shared libraries, infrastructure folders, or mixed ownership boundaries. Do not summarize the whole tree as if it were one application.
 - If the repo is too large for full coverage, prefer breadth-first orientation plus one or two representative deep reads.
+
+## Monorepo Strategy
+
+If the repository is a monorepo, do not describe it as if it were one application.
+
+First identify the repository shape:
+
+- deployable applications
+- shared packages or libraries
+- infrastructure or devops directories
+- docs, examples, or auxiliary tooling
+
+Then follow these rules:
+
+- Start with root-level manifests, workspace configuration, root README/docs, and CI workflows.
+- Use workspace manifests and CI to cross-check what is actually built, tested, and deployed.
+- Separate the repository into boundaries before summarizing behavior.
+- Identify which subprojects are primary and which are supporting.
+- After mapping the full shape, choose only the 1-2 most important subprojects for deeper analysis unless the user explicitly asks for exhaustive coverage.
+- Treat deployable apps, shared packages, and infrastructure as different architectural roles, not as peers in a flat list.
+- Call out when tests, CI, or deployment operate at different layers than the main application code.
+
+When unsure, prefer a report structure like:
+
+- `Repository Thesis`
+- `Repository Shape`
+- `Execution Model`
+- `Architectural Center of Gravity`
+- `Quality Signals and Risks`
+
+Use `references/monorepo-checklist.md` when the repo clearly has multiple packages, apps, or ownership boundaries.
 
 ## Stack-Aware Hints
 
@@ -162,11 +192,13 @@ Let dependency manifests influence where you look first.
 - `go.mod`: check module boundaries, `cmd/` directories, and internal package layout.
 - `docker-compose*`, `Dockerfile*`, Terraform, Helm, or deployment config: use these as evidence for operational shape, not just packaging.
 
+If the stack is not covered above, use manifest filenames, workspace config, source layout, and CI workflows to infer the same things: entrypoints, package boundaries, build paths, and deployment shape.
+
 These are hints, not a rigid language-specific playbook. Use them to improve reading order and entrypoint detection.
 
 ## Output Format
 
-Use the report template in `references/report-template.md` as the structure guide. Use `references/checklist.md` when you need a compact execution checklist before writing.
+Use the report template in `references/report-template.md` as the structure guide. Use `references/checklist.md` when you need a compact execution checklist before writing. Use `references/monorepo-checklist.md` when the repository is a clear monorepo.
 
 Your output must:
 
@@ -180,6 +212,7 @@ Your output must:
 Good section names include:
 
 - `Repository Thesis`
+- `Repository Shape`
 - `Execution Model`
 - `Architectural Center of Gravity`
 - `Project Conventions`
